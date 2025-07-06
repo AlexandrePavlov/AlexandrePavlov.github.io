@@ -38,8 +38,6 @@
       font-size: 2rem;
       font-weight: 400;
       margin: 0;
-      text-decoration: none;
-      color: #111;
     }
 
     .site-title a {
@@ -74,25 +72,34 @@
       padding: 2rem 1.5rem;
     }
 
-    .profile-research {
+    .edu-list li {
       display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.3rem;
     }
-	
-    .profile-photo {
-      display: block;
-      max-width: 250px;
-      width: 100%;
-      height: auto;
+
+    .edu-left {
+      flex: 1;
     }
+
+    .edu-right {
+      color: #111;
+      font-size: 0.95rem;
+      margin-left: 1rem;
+      white-space: nowrap;
+   }
+
 
     h2 {
       font-size: 1.4rem;
       font-weight: 400;
       padding-bottom: 0.5rem;
+      margin-top: 0;
+	  margin-bottom: 0;
+    }
+	
+	ul {
       margin-top: 0;
     }
 
@@ -158,9 +165,9 @@
 <body>
   <header>
     <div class="header-inner">
-      <div class="site-title">
-          <a href="index.html">Alexandre Pavlov</a>
-      </div>
+        <div class="site-title">
+            <a href="index.html">Alexandre Pavlov</a>
+        </div>
       <nav class="nav-links">
         <a href="CV.html">CV</a>
         <a href="teaching.html">Teaching</a>
@@ -171,14 +178,48 @@
     <main>
 
 <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h3></h3>
-        <embed src="documents/CV.pdf" type="application/pdf" width="100%" height="700px" />
-      </div>
-    </div>
+    <main>
+      <p>I am a Université de Montréal PhD candidate doing research at the intersection of macroeconomics and climate economics with a focus on optimal economic policy. You can find my full CV <a href="documents/CV.pdf">here<a/> and a brief summary below.<p/>
+
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Macroeconomics</li>
+        <li>Climate economics</li>
+		<li>Public policy</li>
+      </ul>
+
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <li>
+        <span class="edu-left">PhD in Economics, Université de Montréal</span>
+        <span class="edu-right">Expected 2026</span>
+      </li>
+      <li>
+        <span class="edu-left">MA in Economics, McGill University</span>
+        <span class="edu-right">2020</span>
+      </li>
+      <li>
+        <span class="edu-left">BSc in Economics, Université de Montréal</span>
+        <span class="edu-right">2019</span>
+      </li>
+    </ul>
+
+      <h2>Works in progress</h2>
+      <ul>
+        <li>Optimal Carbon Taxation with Dynamic Skill Heterogeneity (sole-authored)</li>
+        <li>Optimal Environmental Rules with Present-Biased Governments (with Guillaume Sublet)</li>
+        <li>Endogenous Idiosyncratic Climate Risk (with Raphaël Jananji)</li>
+		<li>Transition to Renewables and Public Debt Sustainability (with Fansa Kone, Kodjo Koudapko, and Lucien Chaffa)</li>
+      </ul>
+
+      <h2>Publications</h2>
+      <ul>
+        <li>Tarification optimale du gaz carbonique et élasticités dans les transports (with Charles Vaillancourt and Michel Poitevin) [<a href="https://cirano.qc.ca/fr/sommaires/2020RP-20">PDF</a>]</li>
+      </ul>
+
+    </main>
   </div>
-	    
+
 </main>
 
 <footer class="site-footer">
