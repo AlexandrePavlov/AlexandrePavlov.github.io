@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching – Alexandre Pavlov</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header {
+      border-bottom: 1px solid #ccc;
+      padding: 0.75rem 0;
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .site-title a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .site-title a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .container {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .teaching-table {
+      display: table;
+      width: 100%;
+      margin-top: 1rem;
+      border-spacing: 0 0.5rem;
+    }
+
+    .teaching-row {
+      display: table-row;
+    }
+
+    .teaching-row div {
+      display: table-cell;
+      padding: 0.25rem 0.5rem;
+      vertical-align: top;
+    }
+
+    .section-label div {
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1rem 0.5rem 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .course-name {
+      width: 60%;
+    }
+
+    .course-years {
+      width: 20%;
+      white-space: nowrap;
+    }
+
+    .course-level {
+      width: 20%;
+      white-space: nowrap;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 0 0 0.25rem 0;
+    }
+
+    .site-footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 1rem 1.5rem 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+      color: #007acc;
+    }
+
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .contact {
+      text-align: left;
+      flex: 1;
+    }
+
+    .affiliation {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .nav-links {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="site-title">
+        <a href="/">Alexandre Pavlov</a>
+      </div>
+      <nav class="nav-links">
+        <a href="CV">CV</a>
+        <a href="teaching">Teaching</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <p>I have a passion for teaching and I have had the privilege to teach as a lecturer and teaching assistant throughout my graduate studies, gaining an average instructor rating of 3.8/4 across my courses (Department average: 3.4). Please read my full teaching statement <a href="teaching_statement.pdf" target="_blank" rel="noopener">here</a>.</p>
+
+      <h2>Teaching</h2>
+      <div class="teaching-table">
+
+        <div class="teaching-row section-label">
+          <div class="course-name">Lecturer</div><div></div><div></div>
+        </div>
+
+        <div class="teaching-row">
+          <div class="course-name">Introduction to Macroeconomics</div>
+          <div class="course-years">2022, 2023</div>
+          <div class="course-level">Undergraduate</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Economics and Globalization</div>
+          <div class="course-years">2024</div>
+          <div class="course-level">Master's</div>
+        </div>
+
+        <div class="teaching-row section-label">
+          <div class="course-name">Teaching Assistant</div><div></div><div></div>
+        </div>
+
+        <div class="teaching-row">
+          <div class="course-name">Microeconomic Analysis and Applications (McGill)</div>
+          <div class="course-years">2019</div>
+          <div class="course-level">Undergraduate</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Economic Problems (McGill)</div>
+          <div class="course-years">2020</div>
+          <div class="course-level">Undergraduate</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Applied Econometrics</div>
+          <div class="course-years">2022</div>
+          <div class="course-level">Undergraduate</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Introductory Macroeconomics</div>
+          <div class="course-years">2023</div>
+          <div class="course-level">Undergraduate</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Workshop in Applied Economics</div>
+          <div class="course-years">2024, 2025</div>
+          <div class="course-level">Undergraduate</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Macroeconometrics</div>
+          <div class="course-years">2022–2025</div>
+          <div class="course-level">Master's</div>
+        </div>
+        <div class="teaching-row">
+          <div class="course-name">Macroeconomics</div>
+          <div class="course-years">2021–2024</div>
+          <div class="course-level">PhD</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="contact"><a href="mailto:alexandre.pavlov@umontreal.ca">alexandre.pavlov@umontreal.ca</a></div>
+      <div class="affiliation">Université de Montréal</div>
+    </div>
+  </footer>
+</body>
+</html>
