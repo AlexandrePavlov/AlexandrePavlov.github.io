@@ -10,17 +10,21 @@
       margin: 0;
       padding: 0;
     }
+	
+	a:link {
+	  color: #008000;
+	}
 
     body {
       display: flex;
       flex-direction: column;
-      margin: 0;
+	  margin: 0;
       font-family: system-ui, sans-serif;
       background-color: #fff;
       color: #111;
     }
-
-    header {
+	
+	header {
       border-bottom: 1px solid #ccc;
       padding: 0.75rem 0;
     }
@@ -34,19 +38,11 @@
       align-items: center;
     }
 
-    .site-title {
-      font-size: 2rem;
-      font-weight: 400;
-      margin: 0;
-    }
-
     .site-title a {
+      font-size: 1.5rem;
+      font-weight: 600;
       color: #111;
       text-decoration: none;
-    }
-
-    .site-title a:hover {
-      text-decoration: underline;
     }
 
     .nav-links {
@@ -56,20 +52,21 @@
 
     .nav-links a {
       text-decoration: none;
-      color: #333;
+      color: #555;
       font-weight: 500;
     }
 
     .nav-links a:hover {
-      color: #111;
       text-decoration: underline;
     }
-
+	
     .container {
       flex: 1;
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .edu-list li {
@@ -91,8 +88,8 @@
    }
 
     h2 {
-      font-size: 1.4rem;
-      font-weight: 400;
+      font-size: 1.25rem;
+      font-weight: 600;
       padding-bottom: 0.5rem;
       margin-top: 0;
 	  margin-bottom: 0;
@@ -103,46 +100,38 @@
     }
 
     .site-footer {
-      text-align: center;
+      background-color: #fafafa;
       font-size: 0.9rem;
-      color: #666;
-      padding: 1rem 1.5rem 1rem;
-      border-top: 1px solid #eee;
+	  color: #555;
+      padding: 0.5rem 0.5rem 0.5rem;
+	  border-top: 1px solid #eee;
     }
 
     .site-footer a {
       text-decoration: none;
-      color: #007acc;
+      color: #008000;
     }
 
     .footer-inner {
       max-width: 800px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
+      display: flex; 
+      justify-content: space-between; 
       align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      text-align: center;
-      position: relative;
     }
 
     .site-footer a:hover {
       text-decoration: underline;
     }
 
-    .contact {
-      text-align: left;
+    .footer-left, .footer-center, .footer-right {
       flex: 1;
     }
-
-    .affiliation {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-    }
-
+    
+    .footer-left { text-align: left; }
+    .footer-center { text-align: center; }
+    .footer-right { text-align: right; }
+    
     .site-footer a:hover {
       text-decoration: underline;
     }
@@ -154,9 +143,10 @@
         align-items: center;
         text-align: center;
       }
-
-      .nav-links {
-        margin-top: 0.5rem;
+      
+      .footer-left, .footer-center, .footer-right {
+        text-align: center;
+        width: 100%;
       }
     }
   </style>
@@ -219,12 +209,18 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="contact"><a href="mailto:alexandre.pavlov@umontreal.ca">alexandre.pavlov@umontreal.ca</a></div>
-    <div class="affiliation">Université de Montréal</div>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="mailto:alexandre.pavlov@umontreal.ca">alexandre.pavlov@umontreal.ca</a>
+      </div>
+      <div class="footer-center">
+        Université de Montréal
+      </div>
+      <div class="footer-right">
+        </div>
+    </div>
+  </footer>
 
 </body>
 </html>
