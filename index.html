@@ -16,7 +16,7 @@
       padding: 0;
     }
 	
-	a:link {
+	a {
 	  color: #008000;
 	}
 
@@ -133,6 +133,17 @@
 	.paper-summary {
 	  text-align: justify;
 	}
+	
+	.coauthor-link {
+        color: #555;
+        border-bottom: 1px dotted #ccc;
+    }
+	
+    .coauthor-link:hover {
+        color: #008000;
+        border-bottom: 1px solid #008000;
+        text-decoration: none;
+    }
 
     .site-footer {
       background-color: #fafafa;
@@ -200,7 +211,7 @@
   <header>
     <div class="header-inner">
       <div class="site-title">
-          <a href="/">Alexandre Pavlov</a>
+          <a href="/"  style="color:#008000;">Alexandre Pavlov</a>
       </div>
       <nav class="nav-links">
         <a href="CV">CV</a>
@@ -213,7 +224,7 @@
     <main>
       
       <div class="bio-section">
-        <img src="documents/alexandrepavlov.webp" alt="Alexandre Pavlov" class="profile-photo" width="180" height="180"/>
+        <img src="documents/alexandrepavlov.webp" alt="Alexandre Pavlov" class="profile-photo" width="250" height="250"/>
         <div class="bio-text">
           <p>I am an economics PhD candidate at the Université de Montréal specialized in macroeconomics. My current research focuses on optimal climate policy in heterogeneous agent models.</p>
         </div>
@@ -222,9 +233,8 @@
       <hr class="divider" />
 
       <div class="research-section">
+      <h2>Selected Research</h2>
 	  
-        <h2>Research</h2>
-		
 		<div class="paper-item">
           <div class="paper-title">Optimal carbon tax with dynamic skill heterogeneity</div>
           <div class="paper-meta"></div>
@@ -235,7 +245,9 @@
 
         <div class="paper-item">
           <div class="paper-title">Optimal climate rules</div>
-          <div class="paper-meta">with Guillaume Sublet</div>
+          <div class="paper-meta">
+		  with <a href="https://guillaumesublet.github.io/" class="coauthor-link">Guillaume Sublet</a>
+		  </div>
           <div class="paper-summary">
 		  
           </div>
@@ -243,13 +255,13 @@
 
         <div class="paper-item">
           <div class="paper-title">Optimal correction of stochastic externalities</div>
-          <div class="paper-meta">with Raphaël Jananji</div>
+          <div class="paper-meta">
+		  with <a href="https://raphaeljananji.github.io/" class="coauthor-link">Raphaël Jananji</a>
+		  </div>
           <div class="paper-summary">
 
           </div>
         </div>
-
-      </div>
     </main>
   </div>
 

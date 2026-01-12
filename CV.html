@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexandre Pavlov</title>
+  <title>CV – Alexandre Pavlov</title>
   <style>
     html, body {
       height: 100%;
@@ -11,7 +11,7 @@
       padding: 0;
     }
 	
-	a:link {
+	a {
 	  color: #008000;
 	}
 
@@ -69,34 +69,123 @@
       box-sizing: border-box;
     }
 
-    .edu-list li {
+    .cv-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 0.3rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 2rem;
     }
 
-    .edu-left {
-      flex: 1;
-    }
-
-    .edu-right {
-      color: #111;
-      font-size: 0.95rem;
-      margin-left: 1rem;
+    .btn-download {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #008000;
+      border-radius: 4px;
+      color: #008000;
+      font-weight: 500;
+      font-size: 0.9rem;
       white-space: nowrap;
-   }
+    }
+
+    .btn-download:hover {
+      background-color: #008000;
+      color: #fff;
+      text-decoration: none;
+    }
+	
+	.divider {
+      border: 0;
+      margin: 1rem;
+    }
 
     h2 {
       font-size: 1.25rem;
       font-weight: 600;
-      padding-bottom: 0.5rem;
-      margin-top: 0;
-	  margin-bottom: 0;
+	  color: #008000;
+      margin-bottom: 1rem;
+      border-left: 3px solid #008000;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-degree {
+      font-weight: 500;
+    }
+    
+    .edu-year {
+      color: #999;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      margin-left: 1rem;
     }
 	
-	ul {
-      margin-top: 0;
+    .research-list li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .research-list li::before {
+      content: "•";
+      color: #008000;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .paper-item {
+      margin-bottom: 1rem;
+    }
+
+    .paper-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .paper-title a {
+      text-decoration: none;
+      color: #008000;
+    }
+
+    .paper-title a:hover {
+      text-decoration: underline;
+    }
+
+    .paper-meta {
+      font-size: 0.9rem;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+	
+	.paper-summary {
+	  text-align: justify;
+	}
+	
+	.coauthor-link {
+        color: #555;
+        border-bottom: 1px dotted #ccc;
+    }
+	
+    .coauthor-link:hover {
+        color: #008000;
+        border-bottom: 1px solid #008000;
+        text-decoration: none;
     }
 
     .site-footer {
@@ -106,10 +195,10 @@
       padding: 0.5rem 0.5rem 0.5rem;
 	  border-top: 1px solid #eee;
     }
-
-    .site-footer a {
-      text-decoration: none;
+	
+	.site-footer a {
       color: #008000;
+      text-decoration: none;
     }
 
     .footer-inner {
@@ -118,10 +207,6 @@
       display: flex; 
       justify-content: space-between; 
       align-items: center;
-    }
-
-    .site-footer a:hover {
-      text-decoration: underline;
     }
 
     .footer-left, .footer-center, .footer-right {
@@ -144,6 +229,10 @@
         text-align: center;
       }
       
+      .cv-header {
+        flex-direction: column;
+      }
+      
       .footer-left, .footer-center, .footer-right {
         text-align: center;
         width: 100%;
@@ -152,62 +241,117 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="header-inner">
-        <div class="site-title">
-            <a href="/">Alexandre Pavlov</a>
-        </div>
+      <div class="site-title">
+          <a href="/">Alexandre Pavlov</a>
+      </div>
       <nav class="nav-links">
-        <a href="CV">CV</a>
+        <a href="CV" style="color:#008000;">CV</a>
         <a href="teaching">Teaching</a>
       </nav>
     </div>
   </header>
 
-<div class="container">
+  <div class="container">
     <main>
-      <p>I am a Université de Montréal PhD candidate doing research at the intersection of macroeconomics and climate economics with a focus on optimal economic policy. You can find my full CV <a href="documents/CV.pdf">here<a/> and a brief summary below.<p/>
+      
+      <div class="cv-header">
+        <div>
+           <p style="margin-top:0;text-align: justify;">
+             I am a Université de Montréal PhD candidate doing research at the intersection of macroeconomics and climate economics with a focus on optimal policy.
+           </p>
+        </div>
+        <div>
+          <a href="documents/CV.pdf" class="btn-download" download>Download Full CV</a>
+        </div>
+      </div>
+
+      <h2>Education</h2>
+      <ul>
+        <li class="edu-item">
+          <span class="edu-degree">PhD in Economics, Université de Montréal</span>
+          <span class="edu-year">Expected 2027</span>
+        </li>
+        <li class="edu-item">
+          <span class="edu-degree">MA in Economics, McGill University</span>
+          <span class="edu-year">2020</span>
+        </li>
+        <li class="edu-item">
+          <span class="edu-degree">BSc in Economics, Université de Montréal</span>
+          <span class="edu-year">2019</span>
+        </li>
+      </ul>
+	  
+	  <hr class="divider" />
 
       <h2>Research Interests</h2>
-      <ul>
+      <ul class="research-list">
         <li>Macroeconomics</li>
         <li>Climate economics</li>
-		<li>Public policy</li>
+        <li>Public policy</li>
       </ul>
+	  
+	  <hr class="divider" />
 
-    <h2>Education</h2>
-    <ul class="edu-list">
-      <li>
-        <span class="edu-left">PhD in Economics, Université de Montréal</span>
-        <span class="edu-right">Expected 2026</span>
-      </li>
-      <li>
-        <span class="edu-left">MA in Economics, McGill University</span>
-        <span class="edu-right">2020</span>
-      </li>
-      <li>
-        <span class="edu-left">BSc in Economics, Université de Montréal</span>
-        <span class="edu-right">2019</span>
-      </li>
-    </ul>
+      <h2>Works in Progress</h2>
+	  
+		<div class="paper-item">
+          <div class="paper-title">Optimal carbon tax with dynamic skill heterogeneity</div>
+          <div class="paper-meta"></div>
+          <div class="paper-summary">
+            
+          </div>
+        </div>
 
-      <h2>Works in progress</h2>
-      <ul>
-        <li>Optimal Carbon Taxation with Dynamic Skill Heterogeneity (sole-authored)</li>
-        <li>Optimal Environmental Rules with Present-Biased Governments (with Guillaume Sublet)</li>
-        <li>Endogenous Idiosyncratic Climate Risk (with Raphaël Jananji)</li>
-		<li>Transition to Renewables and Public Debt Sustainability (with Fansa Kone, Kodjo Koudapko, and Lucien Chaffa)</li>
-      </ul>
+        <div class="paper-item">
+          <div class="paper-title">Optimal climate rules</div>
+          <div class="paper-meta">
+		  with <a href="https://guillaumesublet.github.io/" class="coauthor-link">Guillaume Sublet</a>
+		  </div>
+          <div class="paper-summary">
+		  
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">Optimal correction of stochastic externalities</div>
+          <div class="paper-meta">
+		  with <a href="https://raphaeljananji.github.io/" class="coauthor-link">Raphaël Jananji</a>
+		  </div>
+          <div class="paper-summary">
+
+          </div>
+        </div>
+		
+        <div class="paper-item">
+          <div class="paper-title">Transition to Renewables and Public Debt Sustainability</div>
+          <div class="paper-meta">
+		  with <a href="https://fansakone.github.io/" class="coauthor-link">Fansa Kone</a>,
+		  <a href="https://kodjokoudakpo.github.io/" class="coauthor-link">Kodjo Koudapko</a>,
+		  and <a href="https://lucienchaffa.github.io/" class="coauthor-link">Lucien Chaffa</a>
+		  </div>
+          <div class="paper-summary">
+
+          </div>
+        </div>
+		
+	  <hr class="divider" />
 
       <h2>Publications</h2>
-      <ul>
-        <li>Tarification optimale du gaz carbonique et élasticités dans les transports (with Charles Vaillancourt and Michel Poitevin) [<a href="https://cirano.qc.ca/files/publications/2020RP-20.pdf">PDF</a>]</li>
-      </ul>
-
+	  
+	    <div class="paper-item">
+          <div class="paper-title">
+		  <a href="https://cirano.qc.ca/files/publications/2020RP-20.pdf">Tarification optimale du gaz carbonique et élasticités dans les transports</a>
+		  </div>
+          <div class="paper-meta">with Charles Vaillancourt and Michel Poitevin</div>
+          <div class="paper-summary">
+          </div>
+        </div>
+	  
     </main>
   </div>
-
-</main>
 
   <footer class="site-footer">
     <div class="footer-inner">

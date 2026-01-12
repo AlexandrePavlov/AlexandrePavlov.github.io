@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Teaching – Alexandre Pavlov</title>
+  
+  <style>
   <style>
     html, body {
       height: 100%;
@@ -11,7 +14,7 @@
       padding: 0;
     }
 	
-	a:link {
+	a {
 	  color: #008000;
 	}
 
@@ -68,57 +71,57 @@
       width: 100%;
       box-sizing: border-box;
     }
-
-    .teaching-table {
-      display: table;
-      width: 100%;
-      margin-top: 1rem;
-      border-spacing: 0 0.5rem;
-    }
-
-    .teaching-row {
-      display: table-row;
-    }
-
-    .teaching-row div {
-      display: table-cell;
-      padding: 0.25rem 0.5rem;
-      vertical-align: top;
-    }
-
-    .section-label div {
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 1rem 0.5rem 0.5rem;
-      border-bottom: 1px solid #eee;
-    }
-
-    .course-name {
-      width: 60%;
-    }
-
-    .course-years {
-      width: 20%;
-      white-space: nowrap;
-    }
-
-    .course-level {
-      width: 20%;
-      white-space: nowrap;
-    }
-
-    p {
-      margin-bottom: 1.5rem;
+	
+	 .divider {
+      border: 0;
+      margin: 1rem;
     }
 
     h2 {
       font-size: 1.25rem;
       font-weight: 600;
-      padding-bottom: 0.5rem;
-      margin-top: 0;
-	  margin-bottom: 0;
+	  color: #008000;
+      margin-bottom: 1rem;
+      border-left: 3px solid #008000;
+      padding-left: 10px;
     }
-	
+
+    .course-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .course-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 0;
+    }
+
+    .course-item:last-child {
+      border-bottom: none;
+    }
+
+    .course-title {
+      font-weight: 500;
+      flex: 1;
+      margin-right: 1rem;
+    }
+    
+    .course-details {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #999;
+      white-space: nowrap;
+    }
+
+    .institution {
+      font-size: 0.9rem;
+      color: #999;
+      margin-left: 0.5rem;
+    }
+
     .site-footer {
       background-color: #fafafa;
       font-size: 0.9rem;
@@ -139,10 +142,6 @@
       justify-content: space-between; 
       align-items: center;
     }
-	
-	.site-footer a:hover {
-      text-decoration: underline;
-    }
 
     .footer-left, .footer-center, .footer-right {
       flex: 1;
@@ -151,6 +150,10 @@
     .footer-left { text-align: left; }
     .footer-center { text-align: center; }
     .footer-right { text-align: right; }
+	
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width: 600px) {
       .header-inner,
@@ -168,6 +171,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="header-inner">
       <div class="site-title">
@@ -175,73 +179,97 @@
       </div>
       <nav class="nav-links">
         <a href="CV">CV</a>
-        <a href="teaching">Teaching</a>
+        <a href="teaching" style="color:#008000;">Teaching</a>
       </nav>
     </div>
   </header>
 
   <div class="container">
     <main>
-      <p>I have a passion for teaching and I have had the privilege to teach as a lecturer and teaching assistant throughout my graduate studies, gaining an average instructor rating of 3.8/4 across my courses (Department average: 3.4). Please read my full teaching statement <a href="teaching_statement.pdf" target="_blank" rel="noopener">here</a>.</p>
-
-      <h2>Teaching</h2>
-      <div class="teaching-table">
-
-        <div class="teaching-row section-label">
-          <div class="course-name">Lecturer</div><div></div><div></div>
-        </div>
-
-        <div class="teaching-row">
-          <div class="course-name">Introduction to Macroeconomics</div>
-          <div class="course-years">2022, 2023</div>
-          <div class="course-level">Undergraduate</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Economics and Globalization</div>
-          <div class="course-years">2024</div>
-          <div class="course-level">Master's</div>
-        </div>
-
-        <div class="teaching-row section-label">
-          <div class="course-name">Teaching Assistant</div><div></div><div></div>
-        </div>
-
-        <div class="teaching-row">
-          <div class="course-name">Microeconomic Analysis and Applications (McGill)</div>
-          <div class="course-years">2019</div>
-          <div class="course-level">Undergraduate</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Economic Problems (McGill)</div>
-          <div class="course-years">2020</div>
-          <div class="course-level">Undergraduate</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Applied Econometrics</div>
-          <div class="course-years">2022</div>
-          <div class="course-level">Undergraduate</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Introductory Macroeconomics</div>
-          <div class="course-years">2023</div>
-          <div class="course-level">Undergraduate</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Workshop in Applied Economics</div>
-          <div class="course-years">2024, 2025</div>
-          <div class="course-level">Undergraduate</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Macroeconometrics</div>
-          <div class="course-years">2022–2025</div>
-          <div class="course-level">Master's</div>
-        </div>
-        <div class="teaching-row">
-          <div class="course-name">Macroeconomics</div>
-          <div class="course-years">2021–2024</div>
-          <div class="course-level">PhD</div>
-        </div>
+      
+      <div class="teaching-intro">        
+        <p style="text-align: justify;">
+          I have had the privilege to teach both as a lecturer and teaching assistant throughout my graduate studies.
+          I am passionate about teaching and my goal is to make complex economic concepts intuitive and approachable for my students,
+		  tailoring my teaching to each cohort. I currently hold an average instructor rating of 3.8/4 across my courses (dept avg: ~3.4).
+		  You can read my full <strong><a href="teaching_statement.pdf" target="_blank">teaching statement here</a></strong>
+        </p>
       </div>
+	  
+	  <hr class="divider" />
+
+      <h2>Lecturer</h2>
+      <ul class="course-list">
+	    <li class="course-item">
+          <div class="course-title">
+            Introduction to Economics
+			<span class="institution">(Université de Montréal)</span>
+          </div>
+          <div class="course-details">
+            Undergraduate • 2026
+          </div>
+        </li>
+	    <li class="course-item">
+          <div class="course-title">
+            Economics and Globalization
+			<span class="institution">(Université de Montréal)</span>
+          </div>
+          <div class="course-details">
+            Undergraduate • 2024
+          </div>
+        </li>
+        <li class="course-item">
+          <div class="course-title">
+            Introduction to Macroeconomics
+			 <span class="institution">(Université de Montréal)</span>
+          </div>
+          <div class="course-details">
+            Undergraduate • 2022, 2023
+          </div>
+        </li>
+      </ul>
+	  
+	  <hr class="divider" />
+
+	  <h2>Teaching Assistant</h2>
+	  <ul class="course-list">
+	  
+	    <li class="course-item">
+		  <div class="course-title">Macroeconometrics <span class="institution">(Université de Montréal)</span></div>
+		  <div class="course-details">Master's • 2022–2026</div>
+	    </li>
+	    <li class="course-item">
+		  <div class="course-title">Workshop in Applied Economics <span class="institution">(Université de Montréal)</span></div>
+		  <div class="course-details">Undergraduate • 2024, 2026</div>
+	    </li>
+
+	    <li class="course-item">
+		  <div class="course-title">Macroeconomics <span class="institution">(Université de Montréal)</span></div>
+		  <div class="course-details">PhD • 2021–2025</div>
+	    </li>
+
+	    <li class="course-item">
+		  <div class="course-title">Introductory Macroeconomics <span class="institution">(Université de Montréal)</span></div>
+		  <div class="course-details">Undergraduate • 2023</div>
+	    </li>
+
+	    <li class="course-item">
+		  <div class="course-title">Applied Econometrics <span class="institution">(Université de Montréal)</span></div>
+		  <div class="course-details">Undergraduate • 2022</div>
+	    </li>
+
+	    <li class="course-item">
+		  <div class="course-title">Economic Problems <span class="institution">(McGill University)</span></div>
+		  <div class="course-details">Undergraduate • 2020</div>
+	    </li>
+
+	    <li class="course-item">
+		  <div class="course-title">Microeconomic Analysis & Applications <span class="institution">(McGill University)</span></div>
+		  <div class="course-details">Undergraduate • 2019</div>
+	    </li>
+	  
+	  </ul>
+
     </main>
   </div>
 
@@ -257,5 +285,6 @@
         </div>
     </div>
   </footer>
+
 </body>
 </html>
