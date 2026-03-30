@@ -179,7 +179,25 @@
       margin-bottom: 0.5rem;
     }
 	
-	.paper-summary {
+	details.abstract-toggle[open] {
+	  margin-bottom: 0.75rem;
+	}
+	details.abstract-toggle summary {
+	  font-size: 0.85rem;
+	  color: #999;
+	  cursor: pointer;
+	  list-style: none;
+	  display: inline-block;
+	  user-select: none;
+	}
+	details.abstract-toggle summary::-webkit-details-marker { display: none; }
+	details.abstract-toggle summary::after { content: ' ↓'; }
+	details.abstract-toggle[open] summary::after { content: ' ↑'; }
+	details.abstract-toggle summary:hover { color: #008000; }
+	details.abstract-toggle .abstract-text {
+	  margin-top: 0.5rem;
+	  font-size: 0.9rem;
+	  color: #444;
 	  text-align: justify;
 	}
 	
@@ -306,9 +324,6 @@
 		<div class="paper-item">
           <div class="paper-title">Optimal Carbon Tax with Dynamic Skill Heterogeneity</div>
           <div class="paper-meta"></div>
-          <div class="paper-summary">
-            
-          </div>
         </div>
 
         <div class="paper-item">
@@ -316,9 +331,6 @@
           <div class="paper-meta">
 		  with <a href="https://guillaumesublet.github.io/" class="coauthor-link">Guillaume Sublet</a>
 		  </div>
-          <div class="paper-summary">
-		  
-          </div>
         </div>
 
         <div class="paper-item">
@@ -326,11 +338,8 @@
           <div class="paper-meta">
 		  with <a href="https://raphaeljananji.github.io/" class="coauthor-link">Raphaël Jananji</a>
 		  </div>
-          <div class="paper-summary">
-
-          </div>
         </div>
-		
+
         <div class="paper-item">
           <div class="paper-title">Transition to Renewables and Public Debt Sustainability</div>
           <div class="paper-meta">
@@ -338,9 +347,6 @@
 		  <a href="https://kodjokoudakpo.github.io/" class="coauthor-link">Kodjo Koudapko</a>,
 		  and <a href="https://lucienchaffa.github.io/" class="coauthor-link">Lucien Chaffa</a>
 		  </div>
-          <div class="paper-summary">
-
-          </div>
         </div>
 		
 	  <hr class="divider" />
@@ -352,8 +358,6 @@
 		  <a href="https://cirano.qc.ca/files/publications/2020RP-20.pdf">Tarification optimale du gaz carbonique et élasticités dans les transports</a>
 		  </div>
           <div class="paper-meta">with Charles Vaillancourt and Michel Poitevin</div>
-          <div class="paper-summary">
-          </div>
         </div>
 	  
     </main>

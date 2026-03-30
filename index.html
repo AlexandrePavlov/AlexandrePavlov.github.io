@@ -136,7 +136,25 @@
       margin-bottom: 0.5rem;
     }
 	
-	.paper-summary {
+	details.abstract-toggle {
+	  margin-bottom: 0.75rem;
+	}
+	details.abstract-toggle summary {
+	  font-size: 0.85rem;
+	  color: #999;
+	  cursor: pointer;
+	  list-style: none;
+	  display: inline-block;
+	  user-select: none;
+	}
+	details.abstract-toggle summary::-webkit-details-marker { display: none; }
+	details.abstract-toggle summary::after { content: ' ↓'; }
+	details.abstract-toggle[open] summary::after { content: ' ↑'; }
+	details.abstract-toggle summary:hover { color: #008000; }
+	details.abstract-toggle .abstract-text {
+	  margin-top: 0.5rem;
+	  font-size: 0.9rem;
+	  color: #444;
 	  text-align: justify;
 	}
 	
@@ -243,30 +261,36 @@
 	  
 		<div class="paper-item">
           <div class="paper-title">Optimal Carbon Tax with Dynamic Skill Heterogeneity</div>
-          <div class="paper-meta"></div>
-          <div class="paper-summary">
-            
-          </div>
+          <details class="abstract-toggle">
+            <summary>Abstract</summary>
+            <div class="abstract-text">
+              How should a government design a carbon tax when it is not only concerned by mitigating carbon emissions, but also income redistribution? This article extends a dynamic Mirrlees taxation model, typically used to characterize optimal labor wedges and savings wedges, to study the optimal commodity wedge between two goods, one of which is polluting. First, starting with the basic case where there are two non-polluting goods, I derive the optimal commodity wedge with non-separable preferences in a dynamic environment. Second, in the case where one of the goods is polluting and pollution damages both output and utility, I derive a modified optimal carbon tax whose output damages component remains Pigouvian and whose utility damages component is distorted by the labor wedge as well as the gap in complementarity in utility between each good and labor supply. Third, I derive a third-best commodity wedge when one of the other wedges (labor or savings) cannot be set optimally, mirroring the case when commodity wedges compensate for a suboptimal tax system, as well as a third best labor and savings wedge when the commodity wedge cannot be set optimally. In a third-best setting, the "free" wedges have to compensate for the suboptimal wedge. However, the direction of the adjustment of the "free" wedges depends on the structure of preferences, more specifically the size and sign of cross-derivatives.
+            </div>
+          </details>
         </div>
-
         <div class="paper-item">
           <div class="paper-title">Optimal Climate Rules</div>
           <div class="paper-meta">
 		  with <a href="https://guillaumesublet.github.io/" class="coauthor-link">Guillaume Sublet</a>
 		  </div>
-          <div class="paper-summary">
-		  
-          </div>
+      <details class="abstract-toggle">
+            <summary>Short summary</summary>
+            <div class="abstract-text">
+              This project applies the fiscal rules and monetary rules methodology to study optimal "climate rules", where decision makers are present-biased and there is a need to balance commitment and flexibility.
+            </div>
+          </details>
         </div>
-
         <div class="paper-item">
           <div class="paper-title">Optimal Correction of Endogeneous Stochastic Climate Externalities</div>
           <div class="paper-meta">
 		  with <a href="https://raphaeljananji.github.io/" class="coauthor-link">Raphaël Jananji</a>
 		  </div>
-          <div class="paper-summary">
-
-          </div>
+      <details class="abstract-toggle">
+        <summary>Abstract</summary>
+        <div class="abstract-text">
+          We study the optimal correction of environmental externalities when pollution shifts the distribution of climate shocks. Motivated by the extreme event attribution literature, which argues that emissions alter not only the frequency but rather also the full distribution of weather events, we model what we call stochastic externalities. In our framework, the parameters of a distribution of climate shocks are functions of the pollution stock rather than fixed values. Unlike prior work in the economic literature that models endogenous climate risk through increasing arrival rates of catastrophic events, our framework captures the continuous shift of the entire shock distribution. We solve the social planner's problem in a representative agent economy, first in a three-period model and then in an infinite-horizon recursive framework, and derive the optimal corrective carbon tax. The optimal tax adds a stochastic externality correction term to the standard Pigouvian term, which equals to the covariance between future utility and the derivative of the score of the shock distribution with respect to the pollution stock. We provide a few illustrative examples. For normally distributed shocks, this correction decomposes into a mean-shift channel, a risk-aversion channel, and a damage-curvature channel, each with a distinct economic interpretation. For Pareto shocks, this correction has a single tail-fattening channel equal to discounted marginal damages weighted by a weight growing exponentially in shock intensity, leading to a tax that has the potential to diverge faster than the standard Pigouvian tax and potentially reinforcing Weitzman's concerns of a Dismal Theorem. In a numerical example, we show how the stochastic externality channel significantly increases the optimal corrective tax beyond the standard Pigouvian tax and how much welfare can be gained from considering this channel. Our framework accommodates any parametric family of continuous distributions satisfying mild regularity conditions and nests the standard social cost of carbon as a special case.
+        </div>
+      </details>
         </div>
     </main>
   </div>
