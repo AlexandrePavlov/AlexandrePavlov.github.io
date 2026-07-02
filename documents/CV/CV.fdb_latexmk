@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1782139377.15332 "c:/Users/Alex/Desktop/Work/School/UdeM/PhD/Projects/AlexandrePavlov.github.io/documents/CV/CV.tex" "CV.pdf" "CV" 1782139378.53561 0
+["pdflatex"] 1782978121.65401 "c:/Users/Alex/Desktop/Work/School/UdeM/PhD/Projects/AlexandrePavlov.github.io/documents/CV/CV.tex" "CV.pdf" "CV" 1782978122.8577 0
   "C:/Users/Alex/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781184576 190529 6240e8b2f5f87b528b041d57b5ab5471 ""
   "C:/Users/Alex/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1740588889 20028 1a6feece0e11cbf5f36d94537f74009e ""
   "C:/Users/Alex/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1740588828 12017311 f121e635ab9124dec56b07604ecc17ae ""
@@ -64,10 +64,10 @@
   "C:/Users/Alex/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/Alex/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/Alex/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "CV.aux" 1782139378 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
-  "CV.out" 1782139378 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "CV.tex" 1782139374 5694 fc3f8d3fa8a0f9dae3fae853a5b19a4a ""
-  "c:/Users/Alex/Desktop/Work/School/UdeM/PhD/Projects/AlexandrePavlov.github.io/documents/CV/CV.tex" 1782139374 5694 fc3f8d3fa8a0f9dae3fae853a5b19a4a ""
+  "CV.aux" 1782978122 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
+  "CV.out" 1782978122 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "CV.tex" 1782978119 5693 4918f62376827649317e66f4724d0c70 ""
+  "c:/Users/Alex/Desktop/Work/School/UdeM/PhD/Projects/AlexandrePavlov.github.io/documents/CV/CV.tex" 1782978119 5693 4918f62376827649317e66f4724d0c70 ""
   (generated)
   "CV.aux"
   "CV.log"
