@@ -1,187 +1,237 @@
-\documentclass[letterpaper]{article}
+\documentclass[11pt,letterpaper]{article}
 
-\usepackage{hyperref}
-\usepackage{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[nobottomtitles*]{titlesec}
+\usepackage{needspace}
+\usepackage{hyperref}
 
 \def\name{Alexandre Pavlov}
 
 \geometry{
-  body={6.5in, 8.5in},
   left=1.0in,
-  top=1.0in,
-  bottom=0.5in
+  right=1.0in,
+  top=0.9in,
+  bottom=0.9in,
+  footskip=0.45in
 }
+
+% Links: same blue as the job market package; no boxes on screen
+\definecolor{linkblue}{RGB}{0,63,135}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=black,
+  pdftitle={\name: Curriculum Vitae},
+  pdfauthor={\name}
+}
+\urlstyle{same}
 
 \setlength\parindent{0em}
 
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-  }
-}{
-  \end{list}
-}
+% Section headings one size smaller than the article default; a heading
+% with less than five lines of room below it moves to the next page
+\titleformat*{\section}{\large\bfseries}
+\titlespacing*{\section}{0pt}{1.1em plus 0.3em minus 0.2em}{0.35em}
+\renewcommand{\bottomtitlespace}{5\baselineskip}
 
-\pagenumbering{gobble}
+% Entries: indented, no bullets, tight spacing
+\setlist[itemize]{label={}, leftmargin=1.5em, itemsep=0.1em, parsep=0pt, topsep=0.3em}
+
+% \when{date} ends an entry with its date flush right: on the entry's
+% last line if it fits there, otherwise alone on the next line
+\newcommand{\when}[1]{{\unskip\nobreak\hfil\penalty50\hskip1em\hbox{}\nobreak\hfill #1%
+  \parfillskip=0pt\finalhyphendemerits=0\par}}
+
+% \group{label}: bold label over a list, never left alone at the bottom of a
+% page (no check right after a section heading, which must stay with it)
+\makeatletter
+\newcommand{\group}[1]{\par\if@nobreak\else\needspace{4\baselineskip}\fi\textbf{#1}}
+\makeatother
+
+% Paper links are hidden. To show the [PDF] links after the job market paper
+% and the working paper, change \paperlinksfalse to \paperlinkstrue.
+\newif\ifpaperlinks
+\paperlinksfalse
+\newcommand{\paperlink}[1]{\ifpaperlinks\href{#1}{[PDF]}\fi}
+
+% Presentations: the year sits in the margin of the entry; justified, with
+% hyphenation turned off so that venue names are never broken
+\newenvironment{years}{%
+  \begin{itemize}[leftmargin=5em, labelwidth=2.6em, labelsep=0.9em, align=left, itemsep=0.25em,
+    before={\hyphenpenalty=10000 \exhyphenpenalty=10000 \emergencystretch=1.5em}]}
+  {\end{itemize}}
+
+% Footer: name, date of last update, page count
+\newcommand{\monthyear}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\ \number\year}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\textsc{\name}}
+\fancyfoot[C]{\footnotesize Updated \monthyear}
+\fancyfoot[R]{\footnotesize \thepage\ of \pageref{LastPage}}
 
 \begin{document}
 
 \centerline{\huge \bf \name}
-\centerline{\bf Université de Montréal PhD candidate}
 
 \vspace{0.5cm}
 
 \begin{minipage}[t]{0.48\textwidth}
-\textbf{Université de Montréal}\\
 Department of Economics\\
+Université de Montréal\\
 3150 Jean Brillant St., C6070-8\\
-Montréal, QC, H3C 3J7
+Montréal, QC, H3C 3J7, Canada
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
-Email: \href{mailto:alexandre.pavlov@umontreal.ca}{\tt alexandre.pavlov@umontreal.ca}\\
-Website: \href{https://alexandrepavlov.com/}{\tt https://alexandrepavlov.com/}
+Email: \href{mailto:alexandre.pavlov@umontreal.ca}{alexandre.pavlov@umontreal.ca}\\
+Website: \href{https://alexandrepavlov.com/}{alexandrepavlov.com}\\
+Citizenship: Canadian
 \end{minipage}
 
-\vspace{0.5cm}
+\vspace{0.3cm}
 
 \hrulefill
 
 \section*{Education}
 
-\begin{description}
-\itemsep0em
-\item \quad \noindent{Ph.D. economics, Université de Montréal\hfill 2020-\hphantom{xxxx}}
-\item \quad \noindent{M.A. economics, McGill University\hfill 2019-2020}
-\item \quad \noindent{B.Sc. economics, Université de Montréal \hfill 2016-2019}
-\end{description}
-
-\section*{Research}
-
-\subsection*{Research interest}
-
 \begin{itemize}
-\item Macroeconomics, climate economics, public policy
+\item Ph.D. in Economics, Université de Montréal \when{2020--2027 (expected)}
+\begin{itemize}[leftmargin=1em, topsep=0pt]
+\item Advisor: Guillaume Sublet
+\end{itemize}
+\item M.A. in Economics, McGill University \when{2019--2020}
+\item B.Sc. in Economics, Université de Montréal \when{2016--2019}
 \end{itemize}
 
-\subsection*{Job market paper}
+\section*{Research Fields}
 
 \begin{itemize}
-\item \textbf{Optimal Carbon Taxation with Dynamic Skill Heterogeneity} (sole-authored)
+\item Macroeconomics, environmental economics, public finance
 \end{itemize}
 
-\subsection*{Works in progress}
-
-\begin{itemize}
-\item \textbf{Optimal Correction of Environmental Stochastic Externalities} (sole-authored)
-\item \textbf{Optimal Climate Rules} (with Guillaume Sublet)
-\item \textbf{Transition to Renewables and Public Debt Sustainability} (with Fansa Kone, Kodjo Koudapko, and Lucien Chaffa)
-\end{itemize}
-
-\subsection*{Publications}
-
-\begin{itemize}
-\item \textbf{Tarification optimale du gaz carbonique et élasticités dans les transports [Optimal carbon pricing and transport elasticities], 2020, CIRANO} (with Charles Vaillancourt and Michel Poitevin) \href{https://cirano.qc.ca/files/publications/2020RP-20.pdf}{[LINK]}
-\end{itemize}
-
-\section*{Research experience}
-
-\begin{description}
-\itemsep0em
-\item \quad \noindent{Researcher - Mitacs Acceleration scholar (CIRANO \& Québec Ministry of Finance) \hfill 2019-2020}
-\item \quad \noindent{Research assistant - Laboratory for Macroeconomic Policy\hfill 2019-2020}
-\item \quad \noindent{Research assistant - Guillaume Sublet\hfill 2023}
-\end{description}
-
-\section*{Teaching experience}
-
-\begin{description}
-\item \quad \noindent{Lecturer - University de Montréal}
-\begin{description}
-\item \quad \hphantom{x} ECN1901 (introduction to economics) \hfill 2026
-\item \quad \hphantom{x} ECN1700 (economics and globalization) \hfill 2024
-\item \quad \hphantom{x} ECN1050 (macroeconomics) \hfill 2022, 2023
-\end{description}
-
-\newpage
-
-\item \quad \noindent{Teaching assistant - McGill University \& University de Montréal}
-\begin{description}
-\item \textit{Undergraduate level}
-\item \quad \hphantom{x} ECN3950 (workshop in applied economics) \hfill 2024-2026
-\item \quad \hphantom{x} ECN1050 (macroeconomics) \hfill 2023\hphantom{xxxx}
-\item \quad \hphantom{x} ECN2260 (econometrics) \hfill 2022\hphantom{xxxx}
-\item \quad \hphantom{x} ECON 219 (economic problems) \hfill 2020\hphantom{xxxx}
-\item \quad \hphantom{x} ECON 208 (microeconomics) \hfill 2019\hphantom{xxxx}
-\item \textit{Graduate level}
-\item \quad \hphantom{x} ECN6238 (macroeconometrics) \hfill 2022-2026
-\item \quad \hphantom{x} ECN7050 (macroeconomics) \hfill 2021-2025
-\end{description}
-\end{description}
-
-\section*{Academic seminars and conferences}
-
-\begin{itemize}
-\itemsep0em
-\item 7th World Congress of Environmental and Resource Economists \hfill 2026
-\item 25th Journées Louis-André Gérard-Varet \hfill 2026
-\item 15th FAERE Thematic Workshop \hfill 2026
-\item T2M 2026 \hfill 2026
-\item 12th CREEA PhD and Early Career Researcher Workshop \hfill 2026
-\item 60th Annual Meetings of the Canadian Economics Association \hfill 2026
-\item 20th CIREQ PhD Student Conference \hfill 2026
-\item 65th SCSE Annual Conference \hfill 2026
-\item Quebec Social Sciences PhD presentation group \hfill 2024, 2025, 2026
-\item CIREQ Weekly PhD Student Research Workshop \hfill 2024, 2025, 2026
-\item 35th Canadian Resource and Environmental Economics Conference \hfill 2025
-\item UdeM Internal Applied/Macro workshop \hfill 2025
-\item 19th CIREQ PhD Student Conference \hfill 2024
-\item CIRANO-CIREQ Workshops on Environmental and Natural Resource Economics \hfill 2025, 2026
-\item 59th Annual Meetings of the Canadian Economics Association \hfill 2025
-\end{itemize}
-
-\section*{Awards and research grants}
-
-\begin{itemize}
-\itemsep0em
-\item Mitacs Acceleration scholarship (30 000\$) \hfill 2019
-\item FRQSC - Doctoral training scholarship (58 334\$) \hfill 2023-2025
-\end{itemize}
-
-\section*{Service}
-
-\subsection*{Seminar and conference organization}
-
-\begin{itemize}
-\item CIREQ Weekly Phd Student Research Workshop \hfill 2023-2026
-\item 4th CIREQ Interdisciplinary PhD Student Conference on the Environment and Climate Change \hfill 2024
-\end{itemize}
-
-\section*{Skills}
-\begin{itemize}
-\itemsep0em
-\item PhD specialization in macroeconomics and econometrics
-\item Languages : French, English, Russian
-\item Programming : Python, MATLAB, Julia, Fortran, R, STATA, QGIS
-\end{itemize}
-
+% References are hidden. To show them here on page 1, change \iffalse to \iftrue.
 \iffalse
 \section*{References}
 
 \begin{itemize}
-\itemsep0em
-\item Guillaume Sublet (Advisor), \textit{Assistant Professor}, Department of Economics, Université de Montréal
-\begin{itemize}
-\item Email: \href{mailto:guillaume.sublet@umontreal.ca}{\tt guillaume.sublet@umontreal.ca} \hfill  Website: \href{https://guillaumesublet.github.io/}{https://guillaumesublet.github.io/}
-\end{itemize}
-\item Benoit Perron, \textit{Full Professor}, Department of Economics, Université de Montréal
-\begin{itemize}
-\item Email: \href{mailto:benoit.perron@umontreal.ca}{\tt benoit.perron@umontreal.ca} \hfill Website: \href{https://www.benoitperron.com/}{https://www.benoitperron.com/}
-\end{itemize}
+\item
+\begin{minipage}[t]{0.48\linewidth}
+\textbf{Guillaume Sublet} (advisor)\\
+Assistant Professor\\
+Department of Economics\\
+Université de Montréal\\
+\href{mailto:guillaume.sublet@umontreal.ca}{guillaume.sublet@umontreal.ca}\\
+\href{https://guillaumesublet.github.io/}{guillaumesublet.github.io}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\textbf{Benoit Perron}\\
+Full Professor\\
+Department of Economics\\
+Université de Montréal\\
+\href{mailto:benoit.perron@umontreal.ca}{benoit.perron@umontreal.ca}\\
+\href{https://www.benoitperron.com/}{benoitperron.com}
+\end{minipage}
 \end{itemize}
 \fi
 
-\thispagestyle{empty}
+\section*{Job Market Paper}
+
+\begin{itemize}
+\item \textbf{Optimal Carbon Tax with Dynamic Skill Heterogeneity} (sole-authored) \paperlink{https://alexandrepavlov.com/documents/Pigou-Mirrlees-Carbon-Tax.pdf}
+\end{itemize}
+
+\section*{Working Paper}
+
+\begin{itemize}
+\item \textbf{Optimal Correction of Environmental Stochastic Externalities} (sole-authored) \paperlink{https://alexandrepavlov.com/documents/Stochastic-Externalities.pdf}
+\end{itemize}
+
+\section*{Work in Progress}
+
+\begin{itemize}
+\item \textbf{Optimal Climate Rules} (with Guillaume Sublet)
+\item \textbf{Transition to Renewables and Public Debt Sustainability} (with Fansa Kone, Kodjo Koudakpo, and Lucien Chaffa)
+\end{itemize}
+
+\section*{Policy Report}
+
+\begin{itemize}
+\item \textbf{Tarification optimale du gaz carbonique et élasticités dans les transports} [Optimal carbon pricing and transport elasticities] (with Charles Vaillancourt and Michel Poitevin). CIRANO Project Report 2020RP-20, 2020. \href{https://cirano.qc.ca/files/publications/2020RP-20.pdf}{[PDF]}
+\end{itemize}
+
+\section*{Awards and Research Grants}
+
+\begin{itemize}
+\item FRQSC Doctoral Research Scholarship \when{2023--2025}
+\item Mitacs Accelerate internship \when{2019}
+\end{itemize}
+
+\section*{Teaching Experience}
+
+\group{Lecturer (instructor of record), Université de Montréal}
+\begin{itemize}
+\item Macroeconomic Theory 2 (ECN2055), undergraduate \when{2027 (scheduled)}
+\item Introduction to Economics (ECN1901), undergraduate \when{2026}
+\item Economics and Globalization (ECN1700), undergraduate \when{2024}
+\item Introduction to Macroeconomics (ECN1050), undergraduate \when{2022, 2023}
+\end{itemize}
+
+\group{Teaching Assistant, Université de Montréal}
+\begin{itemize}
+\item Macroeconometrics (ECN6238), master's \when{2022--2026}
+\item Macroeconomics (ECN7050), Ph.D. \when{2021--2026}
+\item Workshop in Applied Economics (ECN3950), undergraduate \when{2024--2026}
+\item Introduction to Macroeconomics (ECN1050), undergraduate \when{2023}
+\item Applied Econometrics (ECN2260), undergraduate \when{2022}
+\end{itemize}
+
+\group{Teaching Assistant, McGill University}
+\begin{itemize}
+\item Economic Problems (ECON 219), undergraduate \when{2020}
+\item Microeconomic Analysis and Applications (ECON 208), undergraduate \when{2019}
+\end{itemize}
+
+\section*{Research Experience}
+
+\begin{itemize}
+\item Research Assistant to Guillaume Sublet, Université de Montréal \when{2023}
+\item Researcher (Mitacs Accelerate intern), CIRANO \& Québec Ministry of Finance \when{2019--2020}
+\item Research Assistant, Laboratory for Macroeconomic Policy, Université de Montréal \when{2019--2020}
+\end{itemize}
+
+\section*{Presentations}
+
+\begin{years}
+\item[2026] 36th CREEA Annual Meeting; 13th FAERE Annual Conference; 7th World Congress of Environmental and Resource Economists; 25th Journées Louis-André Gérard-Varet; 15th FAERE Thematic Workshop; Theories and Methods in Macroeconomics (T2M); 12th Canadian PhD and Early Career Researcher Workshop in Environmental and Resource Economics; 60th Annual Meetings of the Canadian Economics Association; 20th CIREQ-CIRANO Ph.D. Students' Conference; 65th SCSE Annual Conference; CIREQ-CIRANO-RRECQ Workshop on Environmental and Natural Resource Economics
+\item[2025] 35th CREEA Annual Meeting; 59th Annual Meetings of the Canadian Economics Association; CIREQ-CIRANO-RRECQ Workshop on Environmental and Natural Resource Economics
+\item[2024] 19th CIREQ PhD Students' Conference
+\end{years}
+\begin{itemize}
+\item \textit{Internal and student workshops:} CIREQ Weekly PhD Student Research Workshop (2024, 2025, 2026); Quebec Social Sciences PhD presentation group (2024, 2025, 2026); UdeM Internal Applied/Macro Workshop (2025)
+\end{itemize}
+
+\section*{Service}
+
+\group{Seminar and conference organization}
+\begin{itemize}
+\item CIREQ Weekly PhD Student Research Workshop \when{2023--2026}
+\item 4th CIREQ Interdisciplinary PhD Student Symposium on Climate Change \when{2024}
+\end{itemize}
+
+\section*{Skills}
+
+\begin{itemize}
+\item Languages: French, English, Russian
+\item Computing: Python, MATLAB, Julia, Fortran, R, Stata, QGIS
+\end{itemize}
+
 \end{document}
