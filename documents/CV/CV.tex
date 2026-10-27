@@ -38,7 +38,7 @@
 % Section headings one size smaller than the article default; a heading
 % with less than five lines of room below it moves to the next page
 \titleformat*{\section}{\large\bfseries}
-\titlespacing*{\section}{0pt}{1.1em plus 0.3em minus 0.2em}{0.35em}
+\titlespacing*{\section}{0pt}{1em plus 0.3em minus 0.2em}{0.35em}
 \renewcommand{\bottomtitlespace}{5\baselineskip}
 
 % Entries: indented, no bullets, tight spacing
@@ -104,9 +104,6 @@ Citizenship: Canadian
 
 \begin{itemize}
 \item Ph.D. in Economics, Université de Montréal \when{2020--2027 (expected)}
-\begin{itemize}[leftmargin=1em, topsep=0pt]
-\item Advisor: Guillaume Sublet
-\end{itemize}
 \item M.A. in Economics, McGill University \when{2019--2020}
 \item B.Sc. in Economics, Université de Montréal \when{2016--2019}
 \end{itemize}
@@ -117,31 +114,46 @@ Citizenship: Canadian
 \item Macroeconomics, environmental economics, public finance
 \end{itemize}
 
-% References are hidden. To show them here on page 1, change \iffalse to \iftrue.
-\iffalse
+% References: two aligned rows, kept together; names link to websites.
 \section*{References}
 
 \begin{itemize}
 \item
+\begin{minipage}{\linewidth}
 \begin{minipage}[t]{0.48\linewidth}
-\textbf{Guillaume Sublet} (advisor)\\
+\raggedright
+\href{https://guillaumesublet.github.io/}{\textbf{Guillaume Sublet}} (advisor)\\
 Assistant Professor\\
-Department of Economics\\
 Université de Montréal\\
-\href{mailto:guillaume.sublet@umontreal.ca}{guillaume.sublet@umontreal.ca}\\
-\href{https://guillaumesublet.github.io/}{guillaumesublet.github.io}
+\href{mailto:guillaume.sublet@umontreal.ca}{guillaume.sublet@umontreal.ca}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\linewidth}
-\textbf{Benoit Perron}\\
+\raggedright
+\href{https://www.benoitperron.com/}{\textbf{Benoit Perron}}\\
 Full Professor\\
-Department of Economics\\
 Université de Montréal\\
-\href{mailto:benoit.perron@umontreal.ca}{benoit.perron@umontreal.ca}\\
-\href{https://www.benoitperron.com/}{benoitperron.com}
+\href{mailto:benoit.perron@umontreal.ca}{benoit.perron@umontreal.ca}
+\end{minipage}
+
+\vspace{0.8em}
+\begin{minipage}[t]{0.48\linewidth}
+\raggedright
+\href{https://www.mcgill.ca/economics/hassan-benchekroun}{\textbf{Hassan Benchekroun}}\\
+Full Professor\\
+McGill University\\
+\href{mailto:hassan.benchekroun@mcgill.ca}{hassan.benchekroun@mcgill.ca}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\raggedright
+\href{https://economie.esg.uqam.ca/corps-enseignant/professeurs/professeur/seguin.charles/}{\textbf{Charles Séguin}}\\
+Associate Professor\\
+Université du Québec à Montréal\\
+\href{mailto:seguin.charles@uqam.ca}{seguin.charles@uqam.ca}
+\end{minipage}
 \end{minipage}
 \end{itemize}
-\fi
 
 \section*{Job Market Paper}
 
@@ -211,7 +223,7 @@ Université de Montréal\\
 \section*{Presentations}
 
 \begin{years}
-\item[2026] 36th CREEA Annual Meeting; 13th FAERE Annual Conference; 7th World Congress of Environmental and Resource Economists; 25th Journées Louis-André Gérard-Varet; 15th FAERE Thematic Workshop; Theories and Methods in Macroeconomics (T2M); 12th Canadian PhD and Early Career Researcher Workshop in Environmental and Resource Economics; 60th Annual Meetings of the Canadian Economics Association; 20th CIREQ-CIRANO Ph.D. Students' Conference; 65th SCSE Annual Conference; CIREQ-CIRANO-RRECQ Workshop on Environmental and Natural Resource Economics
+\item[2026] 36th CREEA Annual Meeting; 13th FAERE Annual Conference; 7th World Congress of Environmental and Resource Economists; 25th Journées Louis-André Gérard-Varet; 15th FAERE Thematic Workshop; 29th T2M Conference; 12th Canadian PhD and Early Career Researcher Workshop in Environmental and Resource Economics; 60th Annual Meetings of the Canadian Economics Association; 20th CIREQ-CIRANO Ph.D. Students' Conference; 65th SCSE Annual Conference; CIREQ-CIRANO-RRECQ Workshop on Environmental and Natural Resource Economics
 \item[2025] 35th CREEA Annual Meeting; 59th Annual Meetings of the Canadian Economics Association; CIREQ-CIRANO-RRECQ Workshop on Environmental and Natural Resource Economics
 \item[2024] 19th CIREQ PhD Students' Conference
 \end{years}
@@ -219,9 +231,8 @@ Université de Montréal\\
 \item \textit{Internal and student workshops:} CIREQ Weekly PhD Student Research Workshop (2024, 2025, 2026); Quebec Social Sciences PhD presentation group (2024, 2025, 2026); UdeM Internal Applied/Macro Workshop (2025)
 \end{itemize}
 
-\section*{Service}
+\section*{Seminar and Conference Organization}
 
-\group{Seminar and conference organization}
 \begin{itemize}
 \item CIREQ Weekly PhD Student Research Workshop \when{2023--2026}
 \item 4th CIREQ Interdisciplinary PhD Student Symposium on Climate Change \when{2024}
