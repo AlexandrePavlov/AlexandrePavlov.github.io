@@ -55,8 +55,8 @@
 \newcommand{\group}[1]{\par\if@nobreak\else\needspace{4\baselineskip}\fi\textbf{#1}}
 \makeatother
 
-% Paper links are hidden. To show the [PDF] links after the job market paper
-% and the working paper, change \paperlinksfalse to \paperlinkstrue.
+% The job market paper is linked directly. To show the working paper's
+% [PDF] link as well, change \paperlinksfalse to \paperlinkstrue.
 \newif\ifpaperlinks
 \paperlinksfalse
 \newcommand{\paperlink}[1]{\ifpaperlinks\href{#1}{[PDF]}\fi}
@@ -158,7 +158,7 @@ Université du Québec à Montréal\\
 \section*{Job Market Paper}
 
 \begin{itemize}
-\item \textbf{Optimal Carbon Tax with Dynamic Skill Heterogeneity} (sole-authored) \paperlink{https://alexandrepavlov.com/documents/Pigou-Mirrlees-Carbon-Tax.pdf}
+\item \textbf{Optimal Carbon Tax with Dynamic Skill Heterogeneity} (sole-authored) \href{https://alexandrepavlov.com/documents/Pigou-Mirrlees-Carbon-Tax.pdf}{[PDF]}
 \end{itemize}
 
 \section*{Working Paper}

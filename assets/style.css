@@ -148,7 +148,7 @@ details.abstract-toggle {
 
 details.abstract-toggle summary {
   font-size: 0.85rem;
-  color: #999;
+  color: #555;
   cursor: pointer;
   list-style: none;
   display: inline-block;
@@ -215,7 +215,7 @@ details.abstract-toggle .abstract-text {
 }
 
 .edu-year {
-  color: #999;
+  color: #666;
   font-size: 0.9rem;
   white-space: nowrap;
   margin-left: 1rem;
@@ -235,6 +235,12 @@ details.abstract-toggle .abstract-text {
 }
 
 /* Teaching page */
+.teaching-evaluations {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .course-list {
   list-style: none;
   padding: 0;
@@ -261,13 +267,13 @@ details.abstract-toggle .abstract-text {
 .course-details {
   text-align: right;
   font-size: 0.9rem;
-  color: #999;
+  color: #666;
   white-space: nowrap;
 }
 
 .institution {
   font-size: 0.9rem;
-  color: #999;
+  color: #666;
   margin-left: 0.5rem;
 }
 
