@@ -235,10 +235,15 @@ details.abstract-toggle .abstract-text {
 }
 
 /* Teaching page */
+.teaching-role-heading {
+  margin-bottom: 0.5rem;
+}
+
 .teaching-evaluations {
-  margin: 0 0 0.75rem;
-  font-size: 0.9rem;
-  color: #555;
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #666;
 }
 
 .course-list {
@@ -251,7 +256,8 @@ details.abstract-toggle .abstract-text {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
+  margin-bottom: 0.25rem;
 }
 
 .course-item:last-child {
